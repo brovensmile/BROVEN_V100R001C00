@@ -1,2 +1,3 @@
 all:
 	echo "MAKEFILE = ${MAKEFILE}"
+	echo "MAKEFILELIST = ${MAKEFILELIST}"
