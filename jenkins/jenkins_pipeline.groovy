@@ -9,10 +9,10 @@ node{
         whoami
     '''
     
-    docker.image('node:7-alpine').inside('-v /opt/:/opt') {
     stage('Test') {
+    docker.image('node:7-alpine').inside('-v /opt/:/opt') {
         sh '''node --version
-            sleep 300
+            sleep 30
         '''
         }
     }
