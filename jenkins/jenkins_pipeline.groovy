@@ -5,7 +5,8 @@ node{
         checkout  changelog:true, poll:true,clearWorkspace:true,scm:[
                  $class: 'GitSCM', 
                  branches: [[name: '*/master']], 
-                 userRemoteConfigs: [[url: 'git@github.com:brovensmile/BROVEN_V100R001C00.git']]
+                 userRemoteConfigs: [[url: 'git@github.com:brovensmile/BROVEN_V100R001C00.git']],
+                 workspaceUpdater: [$class: 'UpdateUpdater']
                  ]
     }  
 
