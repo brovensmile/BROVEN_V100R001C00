@@ -2,11 +2,11 @@ node{
     stage('Source') {
         //git branch: 'master', url: 'git@github.com:brovensmile/BROVEN_V100R001C00.git'
         //git url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
-        checkout  changelog:true, poll:true, clean:true, scm:[
+        checkout  changelog:true, poll:true, scm:[
                  $class: 'GitSCM', 
                  branches: [[name: '*/master']], 
                  userRemoteConfigs: [[url: 'git@github.com:brovensmile/BROVEN_V100R001C00.git']],
-                 workspaceUpdater: [$class: 'UpdateUpdater']
+                 clean:true,
                  ]
     }  
 
